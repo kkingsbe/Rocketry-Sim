@@ -1,0 +1,107 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: rgb(53, 59, 77);
+  flex-direction: column;
+}
+
+.input-form-container {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  justify-content: center;
+  border-radius: 5px;
+}
+.input-form-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.input-form-section input {
+  width: 170px;
+  height: 30px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  padding-left: 5px;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.input-form-section select {
+  width: 174px;
+  height: 30px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 15px;
+}
+.input-form-section select:focus {
+  outline: thin dotted;
+}
+.input-form-section select>option {
+  color: black;
+  background: none;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.input-form-section button {
+  width: 175px;
+  height: 30px;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  color: white;
+  border: 3px solid rgb(37, 231, 37);
+  outline: none;
+}
+@keyframes hover {
+  from {
+    background: none;
+  }
+  to {
+    background: rgb(29, 194, 29);
+  }
+}
+.input-form-section button:hover {
+  width: 175px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  border: 3px solid rgb(29, 194, 29);
+  outline: none;
+
+  -webkit-animation-name: hover;
+  -webkit-animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.graphs-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.graph {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 100px;
+}
+.graph div{
+  height: 30vh;
+}

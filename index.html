@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rocketry Simulator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+
+    <!--Graphing Library-->
+    <script src="//www.amcharts.com/lib/4/core.js"></script>
+    <script src="//www.amcharts.com/lib/4/charts.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/thrust.js"></script>
+    <script src="js/rocket.js"></script>
+    <script src="js/simulator.js"></script>
+    <script src="js/thrustcurves.js"></script>
+    <script src="js/graphing.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="input-form-container">
+        <div class="input-form-section">
+          <input placeholder="Dry Mass (g)" id="dryMassInput" type="number">
+          <input placeholder="Propellant Mass (g)" type="number" id="propMassInput">
+          <input placeholder="Fuselage Diameter (mm)" type="number">
+        </div>
+        <div class="input-form-section">
+          <select id="thrustCurveSelect">
+            <option selected disabled>Motor</option>
+            <option>Default</option>
+          </select>
+          <select id="noseConeSelect">
+            <option selected disabled>Nosecone Type</option>
+            <option>Parabolic</option>
+            <option>Rectangular</option>
+            <option>Spherical</option>
+          </select>
+          <input placeholder="Number of Fins" type="number">
+          <input placeholder="Fin Length" type="number">
+          <input placeholder="Fin Width" type="number">
+          <button type="button">Simulate!</button>
+        </div>
+        <div class="input-form-section">
+          <input placeholder="Air Density" type="number">
+          <input placeholder="Number of Air Brakes" type="number">
+          <input placeholder="Air Brake Length" type="number">
+          <input placeholder="Air Brake Width" type="number">
+        </div>
+      </div>
+      
+      <div class="graphs-container">
+        <div class="graph">
+          <div id="altitudeGraph"></div>
+        </div>
+        <div class="graph">
+          <div id="velocityGraph"></div>
+        </div>
+        <div class="graph">
+          <div id="accelerationGraph"></div>
+        </div>
+        <div class="graph">
+          <div id="dragGraph"></div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js" async defer></script>
+  </body>
+</html>
